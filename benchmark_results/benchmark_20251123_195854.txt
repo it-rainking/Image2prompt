@@ -1,0 +1,232 @@
+======================================================================
+BENCHMARK REPORT - OFFLINE IMAGE ANALYZERS
+Data: 2025-11-23 19:58:54
+======================================================================
+
+## CONFRONTO MODELLI
+
+Modello         Tempo Medio  Min      Max      Parole   Load    
+----------------------------------------------------------------------
+moondream2         55.12s   43.20s  80.32s    141    86.99s
+florence2           0.00s    0.00s   0.00s      0     0.00s
+blip_base           5.19s    4.02s   6.99s     52     9.84s
+
+
+## DETTAGLI PER IMMAGINE
+
+
+──────────────────────────────────────────────────────────────────────
+IMMAGINE: Screenshot 2025-11-23 at 17-48-43 Instagram.png
+──────────────────────────────────────────────────────────────────────
+
+[MOONDREAM2]
+Tempo: 47.10s
+Parole: 116
+
+Caption base:
+The image depicts a young woman with long, pink hair and blue eyes, wearing a black top and blue denim shorts. She is bending over, with her hands resting on her knees, and is wearing black boots. The background features a garden with purple flowers and a white house, creating a serene and peaceful atmosphere. The image has a realistic style, with accurate colors and lighting, and the woman's pose and attire suggest a casual, relaxed mood.
+
+Prompt finale (per SD):
+((best quality)), ((masterpiece)), (detailed), ultra high res, 8k, sharp focus, The image depicts a young woman with long, pink hair and blue eyes, wearing a black top and blue denim shorts. She is bending over, with her hands resting on her knees, and is wearing black boots. The background features a garden with purple flowers and a white house, creating a serene and peaceful atmosphere. The image has a realistic style, with accurate colors and lighting, and the woman's pose and attire suggest a casual, relaxed mood., (perfect facial features:1.3), (very beautiful face), (realistic body details), (smooth detailed skin texture), (photorealistic:1.3), (professional photography), (high dynamic range), cinematic lighting, soft shadows, dramatic light, rim light, volumetric light
+
+Negative prompt:
+((worst quality)), ((low quality)), ((blurry)), ((bad anatomy)), (bad hands:1.4), (missing fingers:1.3), (extra fingers:1.3), (mutated hands:1.3), (poorly drawn hands:1.2), (poorly drawn face:1.2), (deformed:1.2), (ugly:1.1), duplicate, morbid, mutilated, out of frame, disfigured, watermark, signature, text, jpeg artifacts, cropped, username, error, 3d, b&w, bad art, blur, cartoon, childish
+
+[BLIP_BASE]
+Tempo: 4.04s
+Parole: 50
+
+Caption base:
+a photograph of a girl in a black outfit and boots
+
+Prompt finale (per SD):
+((best quality)), ((masterpiece)), (detailed), ultra high res, 8k, sharp focus, a photograph of a girl in a black outfit and boots, (perfect facial features:1.3), (very beautiful face), (realistic body details), (smooth detailed skin texture), (photorealistic:1.3), (professional photography), (high dynamic range), cinematic lighting, soft shadows, dramatic light, rim light, volumetric light
+
+Negative prompt:
+((worst quality)), ((low quality)), ((blurry)), ((bad anatomy)), (bad hands:1.4), (missing fingers:1.3), (extra fingers:1.3), (mutated hands:1.3), (poorly drawn hands:1.2), (poorly drawn face:1.2), (deformed:1.2), (ugly:1.1), duplicate, morbid, mutilated, out of frame, disfigured, watermark, signature, text, jpeg artifacts, cropped, username, error, 3d, b&w, bad art, blur, cartoon, childish
+
+──────────────────────────────────────────────────────────────────────
+IMMAGINE: Screenshot 2025-11-23 at 17-49-27 Instagram.png
+──────────────────────────────────────────────────────────────────────
+
+[MOONDREAM2]
+Tempo: 43.20s
+Parole: 120
+
+Caption base:
+The image depicts a young woman with pink hair and blue eyes, wearing a beige hooded jacket and holding a blue toothbrush in her mouth. The woman is standing in front of a window, with a plant visible in the background. The overall artistic style is anime-inspired, with a focus on the woman's expression and the use of vibrant colors. The lighting suggests a bright and cheerful mood, and the composition places the woman as the central figure in the frame.
+
+Prompt finale (per SD):
+((best quality)), ((masterpiece)), (detailed), ultra high res, 8k, sharp focus, The image depicts a young woman with pink hair and blue eyes, wearing a beige hooded jacket and holding a blue toothbrush in her mouth. The woman is standing in front of a window, with a plant visible in the background. The overall artistic style is anime-inspired, with a focus on the woman's expression and the use of vibrant colors. The lighting suggests a bright and cheerful mood, and the composition places the woman as the central figure in the frame., (perfect facial features:1.3), (very beautiful face), (realistic body details), (smooth detailed skin texture), (intricate details:1.2), (professional artwork), (vibrant colors), cinematic lighting, soft shadows, dramatic light, rim light, volumetric light
+
+Negative prompt:
+((worst quality)), ((low quality)), ((blurry)), ((bad anatomy)), (bad hands:1.4), (missing fingers:1.3), (extra fingers:1.3), (mutated hands:1.3), (poorly drawn hands:1.2), (poorly drawn face:1.2), (deformed:1.2), (ugly:1.1), duplicate, morbid, mutilated, out of frame, disfigured, watermark, signature, text, jpeg artifacts, cropped, username, error, 3d, b&w, bad art, blur, cartoon, childish
+
+[BLIP_BASE]
+Tempo: 5.00s
+Parole: 50
+
+Caption base:
+a photograph of a girl with pink hair and a hoodie
+
+Prompt finale (per SD):
+((best quality)), ((masterpiece)), (detailed), ultra high res, 8k, sharp focus, a photograph of a girl with pink hair and a hoodie, (perfect facial features:1.3), (very beautiful face), (realistic body details), (smooth detailed skin texture), (photorealistic:1.3), (professional photography), (high dynamic range), cinematic lighting, soft shadows, dramatic light, rim light, volumetric light
+
+Negative prompt:
+((worst quality)), ((low quality)), ((blurry)), ((bad anatomy)), (bad hands:1.4), (missing fingers:1.3), (extra fingers:1.3), (mutated hands:1.3), (poorly drawn hands:1.2), (poorly drawn face:1.2), (deformed:1.2), (ugly:1.1), duplicate, morbid, mutilated, out of frame, disfigured, watermark, signature, text, jpeg artifacts, cropped, username, error, 3d, b&w, bad art, blur, cartoon, childish
+
+──────────────────────────────────────────────────────────────────────
+IMMAGINE: Screenshot 2025-11-23 at 17-49-20 Instagram.png
+──────────────────────────────────────────────────────────────────────
+
+[MOONDREAM2]
+Tempo: 56.17s
+Parole: 137
+
+Caption base:
+The image depicts a young woman with pink hair and blue eyes, wearing a white tank top and black shorts. She is leaning against a white pillow, with her left hand resting on her hip and her right hand extended towards the viewer. The background shows a window with white curtains, allowing natural light to illuminate the scene. The overall color scheme is predominantly pink and white, with a touch of black from the shorts. The woman's expression is one of happiness and contentment, and the composition places her in the foreground, drawing the viewer's attention to her.
+
+Prompt finale (per SD):
+((best quality)), ((masterpiece)), (detailed), ultra high res, 8k, sharp focus, The image depicts a young woman with pink hair and blue eyes, wearing a white tank top and black shorts. She is leaning against a white pillow, with her left hand resting on her hip and her right hand extended towards the viewer. The background shows a window with white curtains, allowing natural light to illuminate the scene. The overall color scheme is predominantly pink and white, with a touch of black from the shorts. The woman's expression is one of happiness and contentment, and the composition places her in the foreground, drawing the viewer's attention to her., (perfect facial features:1.3), (very beautiful face), (realistic body details), (smooth detailed skin texture), (intricate details:1.2), (professional artwork), (vibrant colors), cinematic lighting, soft shadows, dramatic light, rim light, volumetric light
+
+Negative prompt:
+((worst quality)), ((low quality)), ((blurry)), ((bad anatomy)), (bad hands:1.4), (missing fingers:1.3), (extra fingers:1.3), (mutated hands:1.3), (poorly drawn hands:1.2), (poorly drawn face:1.2), (deformed:1.2), (ugly:1.1), duplicate, morbid, mutilated, out of frame, disfigured, watermark, signature, text, jpeg artifacts, cropped, username, error, 3d, b&w, bad art, blur, cartoon, childish
+
+[BLIP_BASE]
+Tempo: 6.39s
+Parole: 54
+
+Caption base:
+a photograph of a girl in a bed with a cat ears on her head
+
+Prompt finale (per SD):
+((best quality)), ((masterpiece)), (detailed), ultra high res, 8k, sharp focus, a photograph of a girl in a bed with a cat ears on her head, (perfect facial features:1.3), (very beautiful face), (realistic body details), (smooth detailed skin texture), (photorealistic:1.3), (professional photography), (high dynamic range), cinematic lighting, soft shadows, dramatic light, rim light, volumetric light
+
+Negative prompt:
+((worst quality)), ((low quality)), ((blurry)), ((bad anatomy)), (bad hands:1.4), (missing fingers:1.3), (extra fingers:1.3), (mutated hands:1.3), (poorly drawn hands:1.2), (poorly drawn face:1.2), (deformed:1.2), (ugly:1.1), duplicate, morbid, mutilated, out of frame, disfigured, watermark, signature, text, jpeg artifacts, cropped, username, error, 3d, b&w, bad art, blur, cartoon, childish
+
+──────────────────────────────────────────────────────────────────────
+IMMAGINE: Screenshot 2025-11-23 at 17-48-54 Instagram.png
+──────────────────────────────────────────────────────────────────────
+
+[MOONDREAM2]
+Tempo: 56.56s
+Parole: 133
+
+Caption base:
+The image depicts a young woman with pink hair and blue eyes, wearing a black skirt and a black top. She is kneeling on a bed, with her head resting on her hand and her gaze directed towards the camera. The background features a window with white curtains, allowing natural light to illuminate the scene. The color palette is predominantly black, pink, and white, creating a moody and artistic atmosphere. The composition is well-balanced, with the woman as the central figure and the window as a secondary element.
+
+Prompt finale (per SD):
+((best quality)), ((masterpiece)), (detailed), ultra high res, 8k, sharp focus, The image depicts a young woman with pink hair and blue eyes, wearing a black skirt and a black top. She is kneeling on a bed, with her head resting on her hand and her gaze directed towards the camera. The background features a window with white curtains, allowing natural light to illuminate the scene. The color palette is predominantly black, pink, and white, creating a moody and artistic atmosphere. The composition is well-balanced, with the woman as the central figure and the window as a secondary element., (perfect facial features:1.3), (very beautiful face), (realistic body details), (smooth detailed skin texture), (intricate details:1.2), (professional artwork), (vibrant colors), (photorealistic:1.3), (professional photography), (high dynamic range), cinematic lighting, soft shadows, dramatic light, rim light, volumetric light
+
+Negative prompt:
+((worst quality)), ((low quality)), ((blurry)), ((bad anatomy)), (bad hands:1.4), (missing fingers:1.3), (extra fingers:1.3), (mutated hands:1.3), (poorly drawn hands:1.2), (poorly drawn face:1.2), (deformed:1.2), (ugly:1.1), duplicate, morbid, mutilated, out of frame, disfigured, watermark, signature, text, jpeg artifacts, cropped, username, error, 3d, b&w, bad art, blur, cartoon, childish
+
+[BLIP_BASE]
+Tempo: 5.35s
+Parole: 54
+
+Caption base:
+a photograph of a girl with pink hair and blue eyes laying on a bed
+
+Prompt finale (per SD):
+((best quality)), ((masterpiece)), (detailed), ultra high res, 8k, sharp focus, a photograph of a girl with pink hair and blue eyes laying on a bed, (perfect facial features:1.3), (very beautiful face), (realistic body details), (smooth detailed skin texture), (photorealistic:1.3), (professional photography), (high dynamic range), cinematic lighting, soft shadows, dramatic light, rim light, volumetric light
+
+Negative prompt:
+((worst quality)), ((low quality)), ((blurry)), ((bad anatomy)), (bad hands:1.4), (missing fingers:1.3), (extra fingers:1.3), (mutated hands:1.3), (poorly drawn hands:1.2), (poorly drawn face:1.2), (deformed:1.2), (ugly:1.1), duplicate, morbid, mutilated, out of frame, disfigured, watermark, signature, text, jpeg artifacts, cropped, username, error, 3d, b&w, bad art, blur, cartoon, childish
+
+──────────────────────────────────────────────────────────────────────
+IMMAGINE: Screenshot 2025-11-23 at 17-49-55 Instagram.png
+──────────────────────────────────────────────────────────────────────
+
+[MOONDREAM2]
+Tempo: 46.92s
+Parole: 134
+
+Caption base:
+The image depicts a young woman with long, pink hair and blue eyes, wearing a black sports bra and red shorts. She is sitting on a bench against a blue sky with white clouds, and her hair is styled in a bun. The lighting is natural, and the colors are vibrant, creating a cheerful and energetic mood. The composition is balanced, with the woman as the central focus and the blue sky and clouds as the background. The image is in an artistic style, with a focus on the woman's face and the surrounding environment.
+
+Prompt finale (per SD):
+((best quality)), ((masterpiece)), (detailed), ultra high res, 8k, sharp focus, The image depicts a young woman with long, pink hair and blue eyes, wearing a black sports bra and red shorts. She is sitting on a bench against a blue sky with white clouds, and her hair is styled in a bun. The lighting is natural, and the colors are vibrant, creating a cheerful and energetic mood. The composition is balanced, with the woman as the central focus and the blue sky and clouds as the background. The image is in an artistic style, with a focus on the woman's face and the surrounding environment., (perfect facial features:1.3), (very beautiful face), (realistic body details), (smooth detailed skin texture), (intricate details:1.2), (professional artwork), (vibrant colors), cinematic lighting, soft shadows, dramatic light, rim light, volumetric light
+
+Negative prompt:
+((worst quality)), ((low quality)), ((blurry)), ((bad anatomy)), (bad hands:1.4), (missing fingers:1.3), (extra fingers:1.3), (mutated hands:1.3), (poorly drawn hands:1.2), (poorly drawn face:1.2), (deformed:1.2), (ugly:1.1), duplicate, morbid, mutilated, out of frame, disfigured, watermark, signature, text, jpeg artifacts, cropped, username, error, 3d, b&w, bad art, blur, cartoon, childish
+
+[BLIP_BASE]
+Tempo: 4.56s
+Parole: 48
+
+Caption base:
+a photograph of a girl with long pink hair
+
+Prompt finale (per SD):
+((best quality)), ((masterpiece)), (detailed), ultra high res, 8k, sharp focus, a photograph of a girl with long pink hair, (perfect facial features:1.3), (very beautiful face), (realistic body details), (smooth detailed skin texture), (photorealistic:1.3), (professional photography), (high dynamic range), cinematic lighting, soft shadows, dramatic light, rim light, volumetric light
+
+Negative prompt:
+((worst quality)), ((low quality)), ((blurry)), ((bad anatomy)), (bad hands:1.4), (missing fingers:1.3), (extra fingers:1.3), (mutated hands:1.3), (poorly drawn hands:1.2), (poorly drawn face:1.2), (deformed:1.2), (ugly:1.1), duplicate, morbid, mutilated, out of frame, disfigured, watermark, signature, text, jpeg artifacts, cropped, username, error, 3d, b&w, bad art, blur, cartoon, childish
+
+──────────────────────────────────────────────────────────────────────
+IMMAGINE: Screenshot 2025-11-23 at 17-49-43 Instagram.png
+──────────────────────────────────────────────────────────────────────
+
+[MOONDREAM2]
+Tempo: 55.59s
+Parole: 146
+
+Caption base:
+The image depicts two anime-style characters, a girl with pink hair and a girl with dark hair, embracing each other in a room with a window. The girl with pink hair is wearing a white shirt and blue pants, while the girl with dark hair is wearing a white shirt and blue pants. The room has a window with curtains, and the overall color scheme is predominantly white and blue, with the pink hair adding a pop of color. The girls' expressions and body language suggest a close relationship, and the composition places them in the center of the frame, drawing the viewer's attention to their interaction.
+
+Prompt finale (per SD):
+((best quality)), ((masterpiece)), (detailed), ultra high res, 8k, sharp focus, The image depicts two anime-style characters, a girl with pink hair and a girl with dark hair, embracing each other in a room with a window. The girl with pink hair is wearing a white shirt and blue pants, while the girl with dark hair is wearing a white shirt and blue pants. The room has a window with curtains, and the overall color scheme is predominantly white and blue, with the pink hair adding a pop of color. The girls' expressions and body language suggest a close relationship, and the composition places them in the center of the frame, drawing the viewer's attention to their interaction., (perfect facial features:1.3), (very beautiful face), (realistic body details), (smooth detailed skin texture), (intricate details:1.2), (professional artwork), (vibrant colors), cinematic lighting, soft shadows, dramatic light, rim light, volumetric light
+
+Negative prompt:
+((worst quality)), ((low quality)), ((blurry)), ((bad anatomy)), (bad hands:1.4), (missing fingers:1.3), (extra fingers:1.3), (mutated hands:1.3), (poorly drawn hands:1.2), (poorly drawn face:1.2), (deformed:1.2), (ugly:1.1), duplicate, morbid, mutilated, out of frame, disfigured, watermark, signature, text, jpeg artifacts, cropped, username, error, 3d, b&w, bad art, blur, cartoon, childish
+
+[BLIP_BASE]
+Tempo: 6.99s
+Parole: 57
+
+Caption base:
+a photograph of two girls in school uniforms, one with long hair and the other with long hair
+
+Prompt finale (per SD):
+((best quality)), ((masterpiece)), (detailed), ultra high res, 8k, sharp focus, a photograph of two girls in school uniforms, one with long hair and the other with long hair, (perfect facial features:1.3), (very beautiful face), (realistic body details), (smooth detailed skin texture), (photorealistic:1.3), (professional photography), (high dynamic range), cinematic lighting, soft shadows, dramatic light, rim light, volumetric light
+
+Negative prompt:
+((worst quality)), ((low quality)), ((blurry)), ((bad anatomy)), (bad hands:1.4), (missing fingers:1.3), (extra fingers:1.3), (mutated hands:1.3), (poorly drawn hands:1.2), (poorly drawn face:1.2), (deformed:1.2), (ugly:1.1), duplicate, morbid, mutilated, out of frame, disfigured, watermark, signature, text, jpeg artifacts, cropped, username, error, 3d, b&w, bad art, blur, cartoon, childish
+
+──────────────────────────────────────────────────────────────────────
+IMMAGINE: Screenshot 2025-11-23 at 17-37-45 Instagram.png
+──────────────────────────────────────────────────────────────────────
+
+[MOONDREAM2]
+Tempo: 80.32s
+Parole: 204
+
+Caption base:
+The image depicts a young woman with long, pink hair and blue eyes. She is wearing a black dress and has a black choker necklace. The woman is leaning forward, with her arms resting on her knees, and her gaze is directed towards the camera. The background is a stark white, which contrasts with the woman's pink hair and black dress, making her stand out. The overall style of the image is anime-inspired, with a focus on the woman's face and the details of her attire. The lighting is soft, creating a warm and inviting atmosphere. The colors in the image are predominantly pink and black, with the blue eyes adding a pop of color to the composition. The mood of the image is serene and ethereal, with the woman's pose and the soft lighting contributing to this atmosphere. The composition of the image is balanced, with the woman's face and the background elements placed in a way that draws the viewer's attention to her.
+
+Prompt finale (per SD):
+((best quality)), ((masterpiece)), (detailed), ultra high res, 8k, sharp focus, The image depicts a young woman with long, pink hair and blue eyes. She is wearing a black dress and has a black choker necklace. The woman is leaning forward, with her arms resting on her knees, and her gaze is directed towards the camera. The background is a stark white, which contrasts with the woman's pink hair and black dress, making her stand out. The overall style of the image is anime-inspired, with a focus on the woman's face and the details of her attire. The lighting is soft, creating a warm and inviting atmosphere. The colors in the image are predominantly pink and black, with the blue eyes adding a pop of color to the composition. The mood of the image is serene and ethereal, with the woman's pose and the soft lighting contributing to this atmosphere. The composition of the image is balanced, with the woman's face and the background elements placed in a way that draws the viewer's attention to her., (perfect facial features:1.3), (very beautiful face), (realistic body details), (smooth detailed skin texture), (photorealistic:1.3), (professional photography), (high dynamic range), cinematic lighting, soft shadows, dramatic light, rim light, volumetric light
+
+Negative prompt:
+((worst quality)), ((low quality)), ((blurry)), ((bad anatomy)), (bad hands:1.4), (missing fingers:1.3), (extra fingers:1.3), (mutated hands:1.3), (poorly drawn hands:1.2), (poorly drawn face:1.2), (deformed:1.2), (ugly:1.1), duplicate, morbid, mutilated, out of frame, disfigured, watermark, signature, text, jpeg artifacts, cropped, username, error, 3d, b&w, bad art, blur, cartoon, childish
+
+[BLIP_BASE]
+Tempo: 4.02s
+Parole: 51
+
+Caption base:
+a photograph of a girl with long pink hair and blue eyes
+
+Prompt finale (per SD):
+((best quality)), ((masterpiece)), (detailed), ultra high res, 8k, sharp focus, a photograph of a girl with long pink hair and blue eyes, (perfect facial features:1.3), (very beautiful face), (realistic body details), (smooth detailed skin texture), (photorealistic:1.3), (professional photography), (high dynamic range), cinematic lighting, soft shadows, dramatic light, rim light, volumetric light
+
+Negative prompt:
+((worst quality)), ((low quality)), ((blurry)), ((bad anatomy)), (bad hands:1.4), (missing fingers:1.3), (extra fingers:1.3), (mutated hands:1.3), (poorly drawn hands:1.2), (poorly drawn face:1.2), (deformed:1.2), (ugly:1.1), duplicate, morbid, mutilated, out of frame, disfigured, watermark, signature, text, jpeg artifacts, cropped, username, error, 3d, b&w, bad art, blur, cartoon, childish
+
+
+## ERRORI
+
+- [florence2] Errore caricamento Florence-2: flash_attn.__spec__ is None
+Questo modello potrebbe non essere compatibile con macOS/CPU

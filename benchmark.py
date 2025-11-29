@@ -22,7 +22,7 @@ import argparse
 import hashlib
 from pathlib import Path
 from datetime import datetime
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 from dataclasses import dataclass, asdict
 
 # Import analyzers
@@ -334,9 +334,13 @@ class BenchmarkRunner:
                     if r.image_path == img_path:
                         lines.append(f"\n[{model_name.upper()}]")
                         lines.append(f"Tempo: {r.avg_inference_time:.2f}s")
-                        lines.append(f"Caption: {r.base_caption[:100]}...")
-                        lines.append(f"Prompt: {r.final_prompt[:150]}...")
                         lines.append(f"Parole: {r.word_count}")
+                        lines.append(f"\nCaption base:")
+                        lines.append(f"{r.base_caption}")
+                        lines.append(f"\nPrompt finale (per SD):")
+                        lines.append(f"{r.final_prompt}")
+                        lines.append(f"\nNegative prompt:")
+                        lines.append(f"{r.negative_prompt}")
 
         # Errori
         all_errors = []

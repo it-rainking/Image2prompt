@@ -96,31 +96,151 @@ class BaseOfflineAnalyzer(ABC):
         pass
 
     def enhance_prompt(self, base_caption: str) -> str:
-        """Arricchisce il prompt con termini SD ottimizzati"""
-        enhanced = base_caption.strip()
+        """
+        Arricchisce il prompt con termini SD ottimizzati nel formato corretto.
 
-        # Quality terms da aggiungere se non presenti
-        quality_terms = [
-            'highly detailed',
-            'sharp focus',
-            '8k',
-            'professional',
+        Formato SD: ((best quality)), ((masterpiece)), (detailed), caption,
+                    (feature:1.3), lighting terms, resolution terms
+        """
+        caption = base_caption.strip()
+        caption_lower = caption.lower()
+
+        # === PREFIX: Quality tags con peso massimo ===
+        prefix_tags = [
+            "((best quality))",
+            "((masterpiece))",
+            "(detailed)",
+            "ultra high res",
+            "8k",
+            "sharp focus",
         ]
 
-        caption_lower = enhanced.lower()
-        for term in quality_terms:
-            if term.lower() not in caption_lower:
-                enhanced += f", {term}"
+        # === SUFFIX: Termini tecnici con pesi ===
+        # Lighting terms
+        lighting_tags = [
+            "cinematic lighting",
+            "soft shadows",
+            "dramatic light",
+            "rim light",
+            "volumetric light",
+        ]
 
-        return enhanced
+        # Skin/body quality (per immagini con persone)
+        person_keywords = ['person', 'woman', 'man', 'girl', 'boy', 'portrait',
+                          'face', 'people', 'human', 'model', 'lady', 'guy']
+        has_person = any(kw in caption_lower for kw in person_keywords)
 
-    def generate_negative(self, count: int = 15) -> str:
-        """Genera negative prompt standard"""
+        person_tags = []
+        if has_person:
+            person_tags = [
+                "(perfect facial features:1.3)",
+                "(very beautiful face)",
+                "(realistic body details)",
+                "(smooth detailed skin texture)",
+            ]
+
+        # Art/style quality
+        art_keywords = ['painting', 'illustration', 'artwork', 'drawing', 'art',
+                       'digital', 'render', 'fantasy', 'concept']
+        has_art = any(kw in caption_lower for kw in art_keywords)
+
+        art_tags = []
+        if has_art:
+            art_tags = [
+                "(intricate details:1.2)",
+                "(professional artwork)",
+                "(vibrant colors)",
+            ]
+
+        # Photo quality (per foto realistiche)
+        photo_keywords = ['photo', 'photograph', 'camera', 'shot', 'realistic']
+        has_photo = any(kw in caption_lower for kw in photo_keywords)
+
+        photo_tags = []
+        if has_photo:
+            photo_tags = [
+                "(photorealistic:1.3)",
+                "(professional photography)",
+                "(high dynamic range)",
+            ]
+
+        # === COSTRUISCI PROMPT FINALE ===
+        parts = []
+
+        # 1. Prefix tags
+        parts.extend(prefix_tags)
+
+        # 2. Caption originale (pulita)
+        parts.append(caption)
+
+        # 3. Tags contestuali
+        if person_tags:
+            parts.extend(person_tags)
+        if art_tags:
+            parts.extend(art_tags)
+        if photo_tags:
+            parts.extend(photo_tags)
+
+        # 4. Lighting (sempre)
+        parts.extend(lighting_tags)
+
+        # Unisci con virgole
+        return ", ".join(parts)
+
+    def generate_negative(self, count: int = 30) -> str:
+        """
+        Genera negative prompt ottimizzato per SD nel formato corretto.
+
+        Formato: ((worst quality)), ((low quality)), (bad anatomy:1.3), ...
+        """
         negatives = self.datasets.get('negative', [])
-        if negatives:
-            return ", ".join(negatives[:count])
-        # Fallback se file non trovato
-        return "blurry, bad anatomy, bad hands, cropped, worst quality, low quality, normal quality, jpeg artifacts"
+
+        # Negative con peso massimo (sempre in cima)
+        critical_negatives = [
+            "((worst quality))",
+            "((low quality))",
+            "((blurry))",
+            "((bad anatomy))",
+        ]
+
+        # Negative con peso alto per problemi comuni
+        high_priority = [
+            "(bad hands:1.4)",
+            "(missing fingers:1.3)",
+            "(extra fingers:1.3)",
+            "(mutated hands:1.3)",
+            "(poorly drawn hands:1.2)",
+            "(poorly drawn face:1.2)",
+            "(deformed:1.2)",
+            "(ugly:1.1)",
+        ]
+
+        # Negative standard
+        standard_negatives = [
+            "duplicate",
+            "morbid",
+            "mutilated",
+            "out of frame",
+            "disfigured",
+            "watermark",
+            "signature",
+            "text",
+            "jpeg artifacts",
+            "cropped",
+            "username",
+            "error",
+        ]
+
+        # Combina tutto
+        all_negatives = critical_negatives + high_priority + standard_negatives
+
+        # Aggiungi dal file negative.txt (quelli non già presenti)
+        existing_lower = [n.lower().replace('(', '').replace(')', '').split(':')[0] for n in all_negatives]
+        for neg in negatives:
+            if neg.lower() not in existing_lower:
+                all_negatives.append(neg)
+
+        return ", ".join(all_negatives[:count])
 
     def analyze(self, image_path: str) -> AnalysisResult:
         """Analisi completa dell'immagine"""
@@ -245,8 +365,24 @@ class Florence2Analyzer(BaseOfflineAnalyzer):
     def load_model(self):
         """Carica Florence-2"""
         try:
-            from transformers import AutoProcessor, AutoModelForCausalLM
             import torch
+            import sys
+
+            # Crea un modulo fake flash_attn per evitare l'ImportError
+            # Florence-2 lo importa ma non lo usa realmente su CPU
+            import types
+            fake_flash_attn = types.ModuleType('flash_attn')
+            fake_flash_attn.flash_attn_func = None
+            fake_flash_attn.flash_attn_varlen_func = None
+            sys.modules['flash_attn'] = fake_flash_attn
+
+            # Crea anche il submodule
+            fake_bert_padding = types.ModuleType('flash_attn.bert_padding')
+            fake_bert_padding.unpad_input = lambda *args, **kwargs: None
+            fake_bert_padding.pad_input = lambda *args, **kwargs: None
+            sys.modules['flash_attn.bert_padding'] = fake_bert_padding
+
+            from transformers import AutoProcessor, AutoModelForCausalLM
 
             model_id = "microsoft/Florence-2-base"
 
@@ -268,6 +404,11 @@ class Florence2Analyzer(BaseOfflineAnalyzer):
             raise ImportError(
                 f"Dipendenze mancanti per Florence-2: {e}\n"
                 "Installa con: pip install transformers torch"
+            )
+        except Exception as e:
+            raise RuntimeError(
+                f"Errore caricamento Florence-2: {e}\n"
+                "Questo modello potrebbe non essere compatibile con macOS/CPU"
             )
 
     def generate_caption(self, image_path: str) -> str:
